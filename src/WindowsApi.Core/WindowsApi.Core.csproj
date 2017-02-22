@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{910EB98C-5187-4C46-A4F6-E37EB404F68F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsApi.Core</RootNamespace>
+    <AssemblyName>WindowsApi.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Devices\DelegateKeyboardGlobalHook.cs" />
+    <Compile Include="Devices\KeyboardGlobalHook.cs" />
+    <Compile Include="Devices\DelegateMouseGlobalHook.cs" />
+    <Compile Include="Devices\MouseGlobalHook.cs" />
+    <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Native\DeviceCap.cs" />
+    <Compile Include="Native\HARDWAREINPUT.cs" />
+    <Compile Include="Native\HookType.cs" />
+    <Compile Include="Native\INPUT.cs" />
+    <Compile Include="Native\InputType.cs" />
+    <Compile Include="Native\KBDLLHOOKSTRUCT.cs" />
+    <Compile Include="Native\KEYBDINPUT.cs" />
+    <Compile Include="Native\KeyboardFlag.cs" />
+    <Compile Include="Native\KeyboardMessages.cs" />
+    <Compile Include="Native\LowLevelProc.cs" />
+    <Compile Include="Native\MouseFlag.cs" />
+    <Compile Include="Native\MOUSEINPUT.cs" />
+    <Compile Include="Native\MOUSEKEYBDHARDWAREINPUT.cs" />
+    <Compile Include="Native\MouseMessages.cs" />
+    <Compile Include="Native\MSLLHOOKSTRUCT.cs" />
+    <Compile Include="Native\POINT.cs" />
+    <Compile Include="Native\SystemMetric.cs" />
+    <Compile Include="Native\VirtualKeyCode.cs" />
+    <Compile Include="Native\Win32Point.cs" />
+    <Compile Include="Native\XButton.cs" />
+    <Compile Include="WinApiMethods.cs" />
+    <Compile Include="WinKeyboardState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
